@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Sipariş Sayfası</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>PİZZA SİPARİŞ FORMU</h3>
+    <form action="" id="formPizza">
+        <label for="listPizza">Pizza boyutunu seçiniz:</label>
+        <select name="" id="listPizza" size="4">
+            <option value="20">Küçük Boy</option>
+            <option value="30">Orta Boy</option>
+            <option value="40">Büyük Boy</option>
+            <option value="50">Süper Boy</option>
+        </select>
+        <label for="listEkMalzeme">Ek malzeme seçiniz:</label>
+        <span>
+            <label for="mal1">Yeşil Zeytin</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal1" value="Yeşil Zeytin">
+            <label for="mal2">Sosis</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal2" value="Sosis">
+            <label for="mal3">Sucuk</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal3" value="Sucuk">
+            <label for="mal4">Mısır</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal4" value="Mısır">
+            <label for="mal5">Salam</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal5" value="Salam">
+            <label for="mal6">Mozeralla</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal6" value="Mozeralla">
+
+        </span>
+
+        <label for="listeEkSecimler">Seçtiğiniz ek malzemeler:</label>
+        <select name="" id="listeEkSecimler" size="6">
+
+          
+        </select>
+
+
+
+
+        <label for="grupIndirim">İndirim kodunu giriniz</label>
+        <span>
+            <label for="kodTrue">İndirim kodum var</label>
+            <input type="radio" name="grupIndirim" id="kodTrue" value="Aktif" onchange="toggle();">
+            <label for="kodFalse">İndirim kodum yok</label>
+            <input type="radio" name="grupIndirim" id="kodFalse" value="Pasif" onchange="toggle();" checked>
+        </span>
+        <label for="txtIndirimKodu">İndirim Kodunuzu Giriniz</label>
+        <input type="text" name="" id="txtIndirimKodu" disabled>
+        <input type="button" value="Hesapla/Doğrula" id="btnHesapla" onclick="pizzaHesapla()">
+    </form>
+    <h5 id="sonuc"></h5>
+    <h5 id="dogrulama" style="color: red;"></h5>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
